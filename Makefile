@@ -12,7 +12,7 @@ TARGETS = fk syn st_fk trav sachd fk2mt
 
 all: $(TARGETS)
 
-syn: syn.o ${SUBS} radiats.o futterman.o trap.o
+syn: syn.o ${SUBS} radiats.o futterman.o trap.o RotateStiff.o
 	${LINK.f} -o $@ $^ ${SACLIB} -lm
 
 fk: ${FKSUBS} haskell.o
